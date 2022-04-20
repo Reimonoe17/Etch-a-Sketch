@@ -9,6 +9,7 @@ Public Class Form1
     Dim currentColor As Color
     Private Sub GraphicsExamplesForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         currentColor = Color.Black
+
     End Sub
 
     Sub Sketch(startX As Integer, startY As Integer, endX As Integer, endY As Integer)
@@ -47,6 +48,7 @@ Public Class Form1
         DisplayPictureBox.Refresh()
     End Sub
     Private Sub DrawWaveformButton_Click(sender As Object, e As EventArgs) Handles DrawWaveformButton.Click, DrawWaveformToolStripMenuItem.Click
+        DrawDivisions()
         DrawSinWave()
     End Sub
     Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click, ClearButton.Click
@@ -76,10 +78,20 @@ Public Class Form1
         Console.WriteLine(ymax * Sin(x * (PI / 180)))
 
         Console.WriteLine(Floor((ymax * Sin(x * (PI / 180)))))
-
-
     End Sub
+    Sub DrawDivisions()
+        Dim verticalDivisions As Integer = 10
+        Dim horizontalDivisions As Integer = 8
 
+
+        For v = 0 To 360 Step DisplayPictureBox.Width \ verticalDivisions
+            Sketch(v, 0, v, DisplayPictureBox.Height)
+        Next
+
+        For h = 0 To 200 Step DisplayPictureBox.Height \ horizontalDivisions
+            Sketch(0, h, DisplayPictureBox.Width, h)
+        Next
+    End Sub
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
     End Sub

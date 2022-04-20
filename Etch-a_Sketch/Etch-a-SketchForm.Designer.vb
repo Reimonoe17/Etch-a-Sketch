@@ -48,7 +48,7 @@ Partial Class Form1
         Me.DisplayPictureBox.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.DisplayPictureBox.Location = New System.Drawing.Point(12, 36)
         Me.DisplayPictureBox.Name = "DisplayPictureBox"
-        Me.DisplayPictureBox.Size = New System.Drawing.Size(776, 326)
+        Me.DisplayPictureBox.Size = New System.Drawing.Size(540, 326)
         Me.DisplayPictureBox.TabIndex = 0
         Me.DisplayPictureBox.TabStop = False
         Me.ToolTip.SetToolTip(Me.DisplayPictureBox, "Click to draw on this Canvas")
@@ -60,7 +60,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 33)
+        Me.MenuStrip1.Size = New System.Drawing.Size(564, 33)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -117,40 +117,40 @@ Partial Class Form1
         '
         'SelectColorButton
         '
-        Me.SelectColorButton.Location = New System.Drawing.Point(49, 388)
+        Me.SelectColorButton.Location = New System.Drawing.Point(20, 368)
         Me.SelectColorButton.Name = "SelectColorButton"
-        Me.SelectColorButton.Size = New System.Drawing.Size(153, 51)
-        Me.SelectColorButton.TabIndex = 2
+        Me.SelectColorButton.Size = New System.Drawing.Size(122, 70)
+        Me.SelectColorButton.TabIndex = 0
         Me.SelectColorButton.Text = "Select Color"
         Me.ToolTip.SetToolTip(Me.SelectColorButton, "Change the Color of the Pen")
         Me.SelectColorButton.UseVisualStyleBackColor = True
         '
         'DrawWaveformButton
         '
-        Me.DrawWaveformButton.Location = New System.Drawing.Point(229, 388)
+        Me.DrawWaveformButton.Location = New System.Drawing.Point(148, 368)
         Me.DrawWaveformButton.Name = "DrawWaveformButton"
-        Me.DrawWaveformButton.Size = New System.Drawing.Size(153, 51)
-        Me.DrawWaveformButton.TabIndex = 3
+        Me.DrawWaveformButton.Size = New System.Drawing.Size(131, 70)
+        Me.DrawWaveformButton.TabIndex = 1
         Me.DrawWaveformButton.Text = "Draw Waveform"
         Me.ToolTip.SetToolTip(Me.DrawWaveformButton, "Generates a Sine Wave")
         Me.DrawWaveformButton.UseVisualStyleBackColor = True
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(412, 388)
+        Me.ClearButton.Location = New System.Drawing.Point(285, 368)
         Me.ClearButton.Name = "ClearButton"
-        Me.ClearButton.Size = New System.Drawing.Size(153, 51)
-        Me.ClearButton.TabIndex = 4
+        Me.ClearButton.Size = New System.Drawing.Size(126, 70)
+        Me.ClearButton.TabIndex = 2
         Me.ClearButton.Text = "Clear"
         Me.ToolTip.SetToolTip(Me.ClearButton, "Erases the Canvas")
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
-        Me.ExitButton.Location = New System.Drawing.Point(592, 387)
+        Me.ExitButton.Location = New System.Drawing.Point(417, 368)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(153, 51)
-        Me.ExitButton.TabIndex = 5
+        Me.ExitButton.Size = New System.Drawing.Size(122, 70)
+        Me.ExitButton.TabIndex = 3
         Me.ExitButton.Text = "Exit"
         Me.ToolTip.SetToolTip(Me.ExitButton, "Exit the program")
         Me.ExitButton.UseVisualStyleBackColor = True
@@ -159,7 +159,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(564, 450)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.DrawWaveformButton)
@@ -168,6 +168,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Etch-a-Sketch"
         CType(Me.DisplayPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
