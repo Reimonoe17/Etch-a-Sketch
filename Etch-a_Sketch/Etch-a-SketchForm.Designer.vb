@@ -39,13 +39,20 @@ Partial Class Form1
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectColorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DrawWaveformToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DisplayPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DisplayPictureBox
         '
         Me.DisplayPictureBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DisplayPictureBox.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.DisplayPictureBox.Cursor = System.Windows.Forms.Cursors.Cross
         Me.DisplayPictureBox.Location = New System.Drawing.Point(12, 36)
         Me.DisplayPictureBox.Name = "DisplayPictureBox"
         Me.DisplayPictureBox.Size = New System.Drawing.Size(540, 326)
@@ -155,10 +162,37 @@ Partial Class Form1
         Me.ToolTip.SetToolTip(Me.ExitButton, "Exit the program")
         Me.ExitButton.UseVisualStyleBackColor = True
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectColorToolStripMenuItem1, Me.DrawWaveformToolStripMenuItem1, Me.ClearToolStripMenuItem1})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(213, 100)
+        '
+        'SelectColorToolStripMenuItem1
+        '
+        Me.SelectColorToolStripMenuItem1.Name = "SelectColorToolStripMenuItem1"
+        Me.SelectColorToolStripMenuItem1.Size = New System.Drawing.Size(212, 32)
+        Me.SelectColorToolStripMenuItem1.Text = "Select Color"
+        '
+        'DrawWaveformToolStripMenuItem1
+        '
+        Me.DrawWaveformToolStripMenuItem1.Name = "DrawWaveformToolStripMenuItem1"
+        Me.DrawWaveformToolStripMenuItem1.Size = New System.Drawing.Size(212, 32)
+        Me.DrawWaveformToolStripMenuItem1.Text = "Draw Waveform"
+        '
+        'ClearToolStripMenuItem1
+        '
+        Me.ClearToolStripMenuItem1.Name = "ClearToolStripMenuItem1"
+        Me.ClearToolStripMenuItem1.Size = New System.Drawing.Size(212, 32)
+        Me.ClearToolStripMenuItem1.Text = "Clear"
+        '
         'Form1
         '
+        Me.AcceptButton = Me.DrawWaveformButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.ClearButton
         Me.ClientSize = New System.Drawing.Size(564, 450)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.ClearButton)
@@ -173,6 +207,7 @@ Partial Class Form1
         CType(Me.DisplayPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -194,4 +229,8 @@ Partial Class Form1
     Friend WithEvents ClearButton As Button
     Friend WithEvents ExitButton As Button
     Friend WithEvents ToolTip As ToolTip
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents SelectColorToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DrawWaveformToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ClearToolStripMenuItem1 As ToolStripMenuItem
 End Class
