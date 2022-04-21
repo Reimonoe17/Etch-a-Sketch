@@ -6,12 +6,13 @@
 
 Imports System.Math
 Public Class Form1
+    'A global variable for the color
     Dim currentColor As Color
+    'Automaticly sets to the pen color to black when program opens
     Private Sub GraphicsExamplesForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         currentColor = Color.Black
-
     End Sub
-
+    'The primary subroutine for drawing
     Sub Sketch(startX As Integer, startY As Integer, endX As Integer, endY As Integer)
         Dim g As Graphics = DisplayPictureBox.CreateGraphics
         Dim pen As New Pen(Me.currentColor)
@@ -25,6 +26,7 @@ Public Class Form1
         pen.Dispose()
 
     End Sub
+    'Button inputs given subroutines to run, such as sketch and ColorDialog
     Private Sub GraphicsExamplesForm_MouseMove(sender As Object, e As MouseEventArgs) Handles DisplayPictureBox.MouseMove
         Static Dim oldX, oldY As Integer
 
@@ -44,9 +46,11 @@ Public Class Form1
         oldY = e.Y
 
     End Sub
+    'clears the DisplayPictureBow of any sketchs
     Sub Clear()
         DisplayPictureBox.Refresh()
     End Sub
+    'subroutine that draws a grid and three trinometric functions in different color. It saves the orignal color
     Private Sub DrawWaveformButton_Click(sender As Object, e As EventArgs) Handles DrawWaveformButton.Click, DrawWaveformToolStripMenuItem.Click
         Dim saveColor = currentColor
         DrawDivisions()
