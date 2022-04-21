@@ -153,7 +153,12 @@ Public Class Form1
 
         currentColor = saveColor
     End Sub
-    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
+    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click, ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
+    'About message box
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        MsgBox("This program is a simulation of an Etch-a-Sketch." & vbNewLine & "Prepared for: Tim Rossiter" & vbNewLine & "Prepared by: Jamison Burton")
+    End Sub
+
 End Class
